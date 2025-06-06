@@ -1,0 +1,53 @@
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 10px 20px;
+  z-index: 1000;
+
+  /* ✨ Umbra și plutirea navbarului */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: floatNav 6s ease-in-out infinite;
+}
+
+@keyframes floatNav {
+  0% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  list-style: none;
+  gap: 1.5rem;
+  padding: 0;
+}
+
+.logo {
+  height: 35px;
+  object-fit: contain;
+}
+
+.icon {
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

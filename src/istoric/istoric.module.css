@@ -1,0 +1,87 @@
+/* Fundal uniform roșu închis */
+body {
+  background-color: #540b0e; /* roșu închis, uniform peste tot */
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.listaEvenimente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding: 4rem 2rem;
+  margin-top: 100px;
+}
+
+.eveniment {
+  position: relative;
+  width: 100%;
+  max-width: 10000px;
+  height: 600px;
+  background-color: #540b0e; /* 🔥 roșu închis fundal secțiune */
+  border-radius: 20px;
+
+  /* Umbră moale dar fancy */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: floatNav 6s ease-in-out infinite;
+}
+
+/* Plutire ușoară continuă (bonus animat!) */
+@keyframes plutireMagica {
+  0% {
+    transform: translateX(-50%) translateY(0px);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0px);
+  }
+}
+
+.containerMic,
+.containerMare {
+  background-color: #9e2a2b; /* ❤️ roșu card */
+  color: white;
+  border-radius: 16px;
+  padding: 1rem;
+
+  /* 🌑 Umbre evidențiate + plutire */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(0, 0, 0, 0.3),
+    0 30px 60px rgba(0, 0, 0, 0.2);
+
+  animation: plutireMagica 3s ease-in-out infinite;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  font-family: "Just Me Again Down Here", cursive;
+}
+
+/* Poziționare fixă pentru cele 2 tipuri de containere */
+.containerMic {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 450px;
+  height: 200px;
+}
+
+.containerMare {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 700px;
+  height: 400px;
+}
+
+.invizibil {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.animatiePlutire {
+  transition: all 0.8s ease-out;
+}
