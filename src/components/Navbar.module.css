@@ -10,7 +10,7 @@
   padding: 10px 20px;
   z-index: 1000;
 
-  /* ✨ Umbra și plutirea navbarului */
+  /*  Umbra și plutirea navbarului */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: floatNav 6s ease-in-out infinite;
 }

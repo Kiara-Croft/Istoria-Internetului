@@ -11,9 +11,9 @@ export default function PaginaPrincipala() {
       />
       <div className={styles.overlay}>
         <h1 className={styles.titlu}>
-          <span>The History</span>
+          <span>Istoria </span>
           <br />
-          <span>of the Internet</span>
+          <span>Internetului </span>
         </h1>
 
         <p className={styles.subtitlu}>1957 - 2025</p>

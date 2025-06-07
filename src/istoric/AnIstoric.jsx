@@ -1,53 +1,82 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./istoric.module.css";
 import animations from "./animations.module.css";
 
-export default function AnIstoric() {
-  useEffect(() => {
-    const observator = new IntersectionObserver(
-      (intrari) => {
-        intrari.forEach((intrare) => {
-          if (intrare.isIntersecting) {
-            const animatie = intrare.target.dataset.animation;
-            intrare.target.classList.add(animations[animatie]);
-            intrare.target.classList.add(styles.animatiePlutire);
-            intrare.target.classList.remove(styles.invizibil);
-          }
-        });
-      },
-      {
-        threshold: 0.3,
-      }
-    );
+export default function AnIstoric({ evenimente }) {
+  const observerRef = useRef(null);
 
-    const elemente = document.querySelectorAll(
-      `.${styles.containerMic}, .${styles.containerMare}`
-    );
-    elemente.forEach((element) => {
-      element.classList.add(styles.invizibil);
-      observator.observe(element);
+  useEffect(() => {
+    // Dezactivează temporar animațiile pentru performanță
+    document.body.style.scrollBehavior = "auto";
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        const element = entry.target;
+        const animationClass = animations[element.dataset.animation];
+
+        if (entry.isIntersecting) {
+          element.style.willChange = "opacity, transform";
+          element.classList.add(animationClass, styles.animatiePlutire);
+          element.classList.remove(styles.invizibil);
+
+          // Curăță după ce animația s-a terminat
+          setTimeout(() => {
+            element.style.willChange = "auto";
+          }, 800);
+        } else {
+          // Doar resetăm dacă elementul este complet în afara viewport-ului
+          if (entry.intersectionRatio === 0) {
+            element.classList.remove(animationClass, styles.animatiePlutire);
+            element.classList.add(styles.invizibil);
+          }
+        }
+      });
+    };
+
+    observerRef.current = new IntersectionObserver(handleIntersection, {
+      threshold: 0.15,
+      rootMargin: "50px 0px 50px 0px",
+    });
+
+    const animatedElements = document.querySelectorAll(`
+      .${styles.containerMic},
+      .${styles.containerMare}
+    `);
+
+    animatedElements.forEach((el) => {
+      el.classList.add(styles.invizibil);
+      observerRef.current.observe(el);
     });
 
     return () => {
-      elemente.forEach((el) => observator.unobserve(el));
+      document.body.style.scrollBehavior = "";
+      animatedElements.forEach((el) => {
+        if (observerRef.current) observerRef.current.unobserve(el);
+      });
     };
-  }, []);
+  }, [evenimente]);
 
   return (
     <div className={styles.listaEvenimente}>
-      {Array.from({ length: 68 }).map((_, index) => (
-        <div key={index} className={styles.eveniment}>
+      {evenimente.map((eveniment, index) => (
+        <div key={`${eveniment.titlu}-${index}`} className={styles.eveniment}>
           <div
-            className={`${styles.containerMic}`}
+            className={styles.containerMic}
             data-animation={`animation-${index % 4}`}
           >
-            {index}
+            <h2 className={styles.titlu}>{eveniment.titlu}</h2>
+            {eveniment.an && (
+              <div className={styles.anContainer}>
+                <span className={styles.an}>{eveniment.an}</span>
+              </div>
+            )}
           </div>
+
           <div
-            className={`${styles.containerMare}`}
-            data-animation={`animation-${(index + 1) % 4}`}
+            className={styles.containerMare}
+            data-animation={`animation-${(index + 2) % 4}`}
           >
-            {index}
+            <p className={styles.descriere}>{eveniment.descriere}</p>
           </div>
         </div>
       ))}
