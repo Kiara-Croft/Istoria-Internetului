@@ -1,412 +1,247 @@
 export const evenimenteIstorice = [
   {
-    an: "1957",
-    titlu: "Razboiul rece si cum a inceput totul ",
+    ani: "1957-1958",
+    titlu: "Războiul Rece și nașterea ARPA",
     descriere:
-      "URSS lansează Sputnik, primul satelit artificial. SUA, alarmată, creează ARPA pentru a avansa tehnologia. Fără Sputnik, internetul ar fi putut apărea mult mai târziu!",
+      "URSS lansează Sputnik (1957), determinând SUA să creeze ARPA (1958) pentru avans tehnologic. Fără această competiție, internetul ar fi apărut mult mai târziu.",
+    arePoza: false,
   },
   {
-    an: "1958",
-    titlu: "ARPA contra atacul",
+    ani: "1959-1960",
+    titlu: "Calculatoarele învață să „colaboreze”",
     descriere:
-      "ARPA este înființată oficial. Obiectiv: să mențină SUA în fața concurenței tehnologice. Aici începe povestea financiară a internetului.",
+      "Time-sharing-ul permite utilizare simultană a calculatoarelor (1959), iar multitasking-ul (1960) face posibil execuția mai multor sarcini. Primii pași către rețele.",
+    arePoza: true,
   },
   {
-    an: "1959",
-    titlu: "Calculatoarele încep să se „împartă”",
+    ani: "1961-1962",
+    titlu: "Pachete de date și viziuni galactice",
     descriere:
-      "Time-sharing-ul permite mai multor oameni să folosească același calculator. Primul pas spre rețelele distribuite.",
+      "Informația începe să fie transmisă în pachete (1961), iar J.C.R. Licklider visează la o rețea globală de calculatoare (1962).",
+    arePoza: false,
   },
   {
-    an: "1960",
-    titlu: "Multitasking-ul: mai multe gânduri într-un creier digital",
+    ani: "1963-1964",
+    titlu: "ASCII și rețelele anti-nucleare",
     descriere:
-      "Calculatoarele încep să execute mai multe sarcini simultan. Un salt esențial spre rețele moderne.",
+      "Codul ASCII standardizează comunicarea (1963), iar Paul Baran propune rețele descentralizate care să reziste unui atac nuclear (1964).",
+    arePoza: false,
   },
   {
-    an: "1961",
-    titlu: "Pachetele de date: puzzle-ul comunicării digitale",
+    ani: "1965-1966",
+    titlu: "Prima conexiune și ARPANET",
     descriere:
-      "Informația e transmisă eficient pachete de date. Fără ele, există riscul ca mesajul să se piardă sau să ajungă incomplet, iar problema să treacă neobservată. Cu pachete, dacă apare o eroare, se știe imediat și se poate corecta.",
+      "MIT și Stanford realizează prima conexiune între calculatoare (1965), iar Lawrence Roberts este desemnat să construiască ARPANET (1966).",
+    arePoza: false,
   },
   {
-    an: "1962",
-    titlu: "Viziunea unei „rețele galactice”",
+    ani: "1967-1968",
+    titlu: "Limbaj comun și primele noduri",
     descriere:
-      "J.C.R. Licklider visează la o rețea globală de calculatoare. O idee revoluționară.",
+      "Se adoptă comutarea de pachete ca standard (1967), iar primele noduri de rețea sunt proiectate (1968). Internetul capătă formă.",
+    arePoza: false,
   },
   {
-    an: "1963",
-    titlu: "ASCII ",
+    ani: "1969-1970",
+    titlu: "„LO” istoric și transfer de fișiere",
     descriere:
-      "Este creat codul ASCII – un limbaj comun între computere. Fără el, comunicarea digitală era imposibilă.",
+      "Primul mesaj ARPANET („LO”) e trimis în 1969, iar până în 1970 universitățile pot partaja fișiere.",
+    arePoza: false,
   },
   {
-    an: "1964",
-    titlu: "Internetul, născut din frica unui război",
+    ani: "1971-1972",
+    titlu: "Revoluția e-mailului",
     descriere:
-      "Paul Baran propune rețele descentralizate pentru a supraviețui unui atac nuclear. Conceptul prinde contur.",
+      "Ray Tomlinson introduce e-mail-ul și simbolul „@” (1971). Până în 1972, 75% din traficul ARPANET e mesagerie.",
+    arePoza: false,
   },
   {
-    an: "1965",
-    titlu: "Prima conexiune: două calculatoare, o conversație",
+    ani: "1973-1974",
+    titlu: "Internetul devine global și capătă protocoale",
     descriere:
-      "MIT și Stanford fac prima conexiune între două calculatoare. E începutul real al rețelelor.",
+      "ARPANET ajunge în Europa (1973), iar TCP/IP (1974) devine alfabetul universal al internetului.",
+    arePoza: false,
   },
   {
-    an: "1966",
-    titlu: "ARPANET prinde contur",
+    ani: "1975-1976",
+    titlu: "E-mail regal și rețele unite",
     descriere:
-      "Lawrence Roberts este desemnat să construiască ARPANET(ARPA 2.0). Rețeaua prinde formă.",
+      "E-mail-ul devine aplicația principală (1975), iar Regina Elisabeta trimite primul e-mail regal (1976).",
+    arePoza: false,
   },
   {
-    an: "1967",
-    titlu: "Rețelele își aleg un limbaj comun",
+    ani: "1977-1978",
+    titlu: "Teste cruciale și primul spam",
     descriere:
-      "Cercetătorii decid ca toate rețelele să folosească comutarea de pachete. Se pune bazele Internetului.",
+      "Primul test reușit între rețele diferite (1977) și primul mesaj spam (1978) marchează adolescența internetului.",
+    arePoza: false,
   },
   {
-    an: "1968",
-    titlu: "Internetul capătă „noduri”",
+    ani: "1979-1980",
+    titlu: "Usenet și cultura digitală",
     descriere:
-      "Se proiectează primele noduri de rețea. Structura Internetului prinde viață.",
+      "Apare Usenet (1979), strămoșul forumurilor, iar discuțiile online devin parte din viața academică (1980).",
+    arePoza: true,
   },
   {
-    an: "1969",
-    titlu: " Primul mesaj LO L",
+    ani: "1981-1982",
+    titlu: "Modem personal și nume oficial",
     descriere:
-      " Primul mesaj care ar fi trebuit sa fie trimis ar fi fost 'LOGIN' dar sistemul cedeaza dupa 'LO' si se ia procesul de la capat rezultand in 'LO L'",
+      "Modemul personal aduce internetul aproape de casă (1981), iar termenul „Internet” este oficializat (1982).",
+    arePoza: false,
   },
   {
-    an: "1970",
-    titlu: "Datele încep să circule în rețea",
+    ani: "1983-1984",
+    titlu: "TCP/IP și DNS",
     descriere:
-      "ARPANET permite trimiterea de fișiere între universități. Partajarea devine posibilă.",
+      "ARPANET adoptă TCP/IP (1983), iar DNS (1984) înlocuiește numerele cu nume de domenii memorabile.",
+    arePoza: false,
   },
   {
-    an: "1971",
-    titlu: "E-mail-ul: mesajul care a schimbat tot",
+    ani: "1985-1986",
+    titlu: ".com și NSFNET",
     descriere:
-      "Ray Tomlinson trimite primul e-mail și introduce simbolul „@”. Comunicarea digitală prinde viață.",
+      "Symbolics.com devine primul domeniu comercial (1985), iar NSFNET preia rolul ARPANET (1986).",
+    arePoza: true,
   },
   {
-    an: "1972",
-    titlu: "Mesajele devin viață digitală",
+    ani: "1987-1988",
+    titlu: "Explozie și primul virus",
     descriere:
-      "E-mail-ul explodează în popularitate. 75% din traficul ARPANET e acum mesagerie.",
+      "Internetul atinge 10.000 de calculatoare (1987), dar Morris Worm (1988) expune vulnerabilitățile.",
+    arePoza: false,
   },
   {
-    an: "1973",
-    titlu: "Internetul traversează oceanul",
+    ani: "1989-1990",
+    titlu: "WWW și primul browser",
     descriere:
-      "ARPANET se extinde în Norvegia și Marea Britanie. Rețeaua devine internațională.",
+      "Tim Berners-Lee inventează World Wide Web-ul (1989), iar primul browser apare în 1990.",
+    arePoza: false,
   },
   {
-    an: "1974",
-    titlu: "TCP/IP: alfabetul internetului",
+    ani: "1991-1992",
+    titlu: "Web public și Internet Society",
     descriere:
-      "Vint Cerf și Bob Kahn dezvoltă TCP/IP – protocolul de bază al Internetului.",
+      "Web-ul devine accesibil publicului (1991), iar Internet Society (1992) promovează standarde globale.",
+    arePoza: false,
   },
   {
-    an: "1975",
-    titlu: "E-mail-ul: prima aplicație virală",
+    ani: "1993-1994",
+    titlu: "Mosaic și era dot-com",
     descriere:
-      "E-mail-ul devine aplicația principală a ARPANET. Internetul începe să fie despre oameni.",
+      "Browserul Mosaic (1993) aduce grafica, iar 1994 aduce Netscape, reclame online și comerț electronic.",
+    arePoza: true,
   },
   {
-    an: "1976",
-    titlu: "Regina trimite un e-mail: tehnologia devine regală",
+    ani: "1995-1996",
+    titlu: "Windows 95 și Yahoo!",
     descriere:
-      "Regina Elisabeta a II-a trimite un e-mail. Simbolic: internetul devine mainstream.",
+      "Windows 95, Amazon și eBay (1995) democratizează internetul, iar Yahoo! domină anii 1996.",
+    arePoza: true,
   },
   {
-    an: "1977",
-    titlu: "Rețelele încep să colaboreze",
+    ani: "1997-1998",
+    titlu: "Wi-Fi și Google",
     descriere:
-      "Este realizat primul test între trei rețele diferite prin TCP/IP. Funcționează!",
+      "Wi-Fi devine standard (1997), iar Google (1998) redefinește căutarea online.",
+    arePoza: false,
   },
   {
-    an: "1978",
-    titlu: "Primul spam lovește inboxul",
+    ani: "1999-2000",
+    titlu: "Napster și crahul dot-com",
     descriere:
-      "Este trimis primul mesaj de tip spam. Începe o nouă problemă digitală.",
+      "Napster popularizează P2P (1999), dar bula dot-com se sparge în 2000.",
+    arePoza: true,
   },
   {
-    an: "1979",
-    titlu: "Forumurile iau naștere: Usenet",
+    ani: "2001-2002",
+    titlu: "Wikipedia și rețelele sociale",
     descriere:
-      "Usenet permite discuții publice pe internet. Strămoșul rețelelor sociale.",
+      "Wikipedia apare în 2001, iar Friendster și LinkedIn (2002) marchează începuturile social media.",
+    arePoza: false,
   },
   {
-    an: "1980",
-    titlu: "Cultura digitală prinde contur",
+    ani: "2003-2004",
+    titlu: "MySpace și Facebook",
     descriere:
-      "E-mail-urile și discuțiile online devin uzuale în universități. Apare cultura online.",
+      "MySpace domină (2003), dar Facebook (2004) revoluționează rețelele sociale.",
+    arePoza: true,
   },
   {
-    an: "1981",
-    titlu: "Modemul personal: poarta către rețea",
+    ani: "2005-2006",
+    titlu: "YouTube și Twitter",
     descriere:
-      "Apare primul modem personal. Internetul poate intra în case (teoretic).",
+      "YouTube (2005) aduce video-ul maselor, iar Twitter (2006) introduce comunicarea scurtă și virală.",
+    arePoza: true,
   },
   {
-    an: "1982",
-    titlu: "„Internet” primește un nume oficial",
+    ani: "2007-2008",
+    titlu: "iPhone și App Store",
     descriere:
-      "Termenul „Internet” este adoptat oficial. Identitate clară pentru rețea.",
+      "iPhone-ul (2007) mobilizează internetul, iar App Store (2008) lansează economia aplicațiilor.",
+    arePoza: false,
   },
   {
-    an: "1983",
-    titlu: "TCP/IP devine norma",
-    descriere: "ARPANET adoptă TCP/IP. Internetul modern este lansat oficial.",
-  },
-  {
-    an: "1984",
-    titlu: "DNS: numele iau locul numerelor",
-    descriere:
-      "DNS permite folosirea numelor de domenii. Adresele devin ușor de reținut. In loc sa scri 142.250.186.206 scrii google (bine atunci inca nu exista dar intelegi la ce ma refer)",
-  },
-  {
-    an: "1985",
-    titlu: "Primul .com: internetul devine comercial",
-    descriere:
-      "Symbolics.com este primul domeniu .com înregistrat. Începutul comerțului digital.",
-  },
-  {
-    an: "1986",
-    titlu: "NSFNET preia ștafeta",
-    descriere: "NSFNET înlocuiește ARPANET. Internetul se extinde rapid.",
-  },
-  {
-    an: "1987",
-    titlu: "Rețeaua explodează: ",
-    descriere:
-      "Internetul crește vertiginos. 10.000 de calculatoare conectate.  ",
-  },
-  {
-    an: "1988",
-    titlu: "Primul virus digital atacă rețeaua",
-    descriere:
-      "Morris Worm infectează mii de calculatoare. Securitatea devine subiect serios.",
-  },
-  {
-    an: "1989",
-    titlu: "Web-ul este inventat în liniște",
-    descriere:
-      "Tim Berners-Lee propune World Wide Web-ul la CERN. Se pune bazele web-ului modern.",
-  },
-  {
-    an: "1990",
-    titlu: "Primul browser: poarta către web",
-    descriere:
-      "Este creat primul browser și server web. Web-ul e gata să pornească.",
-  },
-  {
-    an: "1991",
-    titlu: "WWW devine public: oricine poate crea",
-    descriere:
-      "Web-ul devine accesibil publicului dupa 2 ai. Internetul se democratizează.",
-  },
-  {
-    an: "1992",
-    titlu: "Se naște Internet Society",
-    descriere:
-      "Este fondată Internet Society. Promovează standarde și colaborare globală.",
-  },
-  {
-    an: "1993",
-    titlu: "Mosaic schimbă tot: internetul devine vizual",
-    descriere:
-      "Mosaic, primul browser grafic, aduce web-ul în viața de zi cu zi.",
-  },
-  {
-    an: "1994",
-    titlu: "Publicitate, browsere, comerț: explozia web-ului",
-    descriere:
-      "Netscape Navigator, primele reclame online și primele tranzacții marchează era dot-com.",
-  },
-  {
-    an: "1995",
-    titlu: "Internetul intră în casele noastre",
-    descriere: "Windows 95, Amazon, eBay – începutul erei digitale personale.",
-  },
-  {
-    an: "1996",
-    titlu: "Spam-ul explodează, Yahoo! domină",
-    descriere:
-      "Yahoo! devine gigantul web-ului. Spam-ul devine o problemă majoră.",
-  },
-  {
-    an: "1997",
-    titlu: "Wi-Fi și începuturile blogging-ului",
-    descriere:
-      "Wi-Fi devine standard, iar blogurile apar. Utilizatorii creează conținut.",
-  },
-  {
-    an: "1998",
-    titlu: "Google schimbă căutarea pentru totdeauna",
-    descriere:
-      "Google redefineste căutarea online. Rapid, relevant, revoluționar.",
-  },
-  {
-    an: "1999",
-    titlu: "Napster și războiul fișierelor",
-    descriere:
-      "Napster popularizează partajarea P2P. Industria muzicală reacționează.",
-  },
-  {
-    an: "2000",
-    titlu: "Crahul dot-com: căderea și lecțiile internetului",
-    descriere: "Bula dot-com se sparge. Rămân doar cei puternici.",
-  },
-  {
-    an: "2001",
-    titlu: "Wikipedia: cunoașterea devine mai accesibila",
-    descriere:
-      "Wikipedia este lansată. Oricine poate contribui. Internetul devine o enciclopedie vie.",
-  },
-  {
-    an: "2002",
-    titlu: "Internetul devine social: Friendster și LinkedIn",
-    descriere:
-      "Friendster și LinkedIn apar. Ideea de rețea socială prinde viață – online nu mai ești singur.",
-  },
-  {
-    an: "2003",
-    titlu: "MySpace și WordPress: tu ești conținutul",
-    descriere:
-      "MySpace domină rețelele sociale. WordPress permite oricui să scrie. Blogosfera explodează.",
-  },
-  {
-    an: "2004",
-    titlu: "Facebook se naște în căminul studențesc",
-    descriere:
-      "Mark Zuckerberg lansează Facebook la Harvard. Rețelele sociale devin personale și addictive.",
-  },
-  {
-    an: "2005",
-    titlu: "YouTube: video-ul urcă pe scenă",
-    descriere:
-      "YouTube este lansat. Oricine poate urca un video. Generația „video first” începe.",
-  },
-  {
-    an: "2006",
-    titlu: "Twitter: gânduri în 140 de caractere",
-    descriere:
-      "Twitter este lansat. Comunicarea devine rapidă, scurtă și virală. #Hashtag-ul devine cultură.",
-  },
-  {
-    an: "2007",
-    titlu: "iPhone: internetul devine mobil",
-    descriere:
-      "Apple lansează iPhone-ul. Nu mai trebuie să fii la birou pentru a fi online. Smartphone-ul schimbă tot.",
-  },
-  {
-    an: "2008",
-    titlu: "App Store: internetul are aplicații pentru orice",
-    descriere:
-      "Se lansează App Store-ul. Milioane de aplicații conectate la internet apar. Economia digitală explodează.",
-  },
-  {
-    an: "2009",
-    titlu: "Bitcoin: banii intră în era descentralizată",
-    descriere:
-      "Bitcoin este lansat. Apare ideea de monedă fără bancă. Blockchain intră în vocabular.",
-  },
-  {
-    an: "2010",
-    titlu: "Instagram: imaginea înlocuiește textul",
-    descriere:
-      "Instagram este lansat. Vizualul devine forma principală de comunicare online.",
-  },
-  {
-    an: "2011",
-    titlu: "Cloud-ul: datele urcă în nori",
-    descriere:
-      "Serviciile cloud devin populare (Dropbox, iCloud). Nu mai contează unde ești – datele sunt oriunde.",
-  },
-  {
-    an: "2012",
-    titlu: "Facebook cumpără Instagram: giganții se consolidează",
-    descriere:
-      "Facebook achiziționează Instagram. Companiile tech devin imperii media.",
-  },
-  {
-    an: "2013",
-    titlu: "Snowden și confidențialitatea digitală",
-    descriere:
-      "Edward Snowden dezvăluie supravegherea globală. Lumea devine conștientă de prețul intimității online.",
-  },
-  {
-    an: "2014",
-    titlu: "Internet of Things: obiectele devin inteligente",
-    descriere:
-      "Frigiderele, ceasurile și becurile încep să se conecteze la net. Totul devine „smart”.",
-  },
-  {
-    an: "2015",
-    titlu: "Revoluția live: Periscope și streaming-ul instant",
-    descriere:
-      "Live streaming-ul ia avânt. Poți transmite viața ta în direct, oricând, oriunde.",
-  },
-  {
-    an: "2016",
-    titlu: "Fake news și bula informațională",
-    descriere:
-      "Alegerile din SUA aduc în prim plan fenomenul „fake news”. Internetul devine câmp de bătălie informațional.",
-  },
-  {
-    an: "2017",
-    titlu: "Net neutrality sub asediu",
+    ani: "2009-2010",
+    titlu: "Bitcoin și Instagram",
     descriere:
-      "În SUA, se anulează reglementările pentru neutralitatea internetului. Lumea începe să se teamă de un internet cu viteze „cu abonament”.",
+      "Bitcoin (2009) introduce moneda digitală, iar Instagram (2010) pune vizualul în centru.",
+    arePoza: false,
   },
   {
-    an: "2018",
-    titlu: "GDPR: Europa cere intimitate",
+    ani: "2011-2012",
+    titlu: "Cloud și imperii digitale",
     descriere:
-      "UE implementează GDPR. Companiile trebuie să fie transparente cu datele tale. Privacy devine prioritate.",
+      "Cloud-ul devine mainstream (2011), iar Facebook cumpără Instagram (2012), semnalând consolidarea giganților.",
+    arePoza: false,
   },
   {
-    an: "2019",
-    titlu: "TikTok domină ecranele",
+    ani: "2013-2014",
+    titlu: "Snowden și IoT",
     descriere:
-      "TikTok explodează în popularitate. Formatul scurt, viral, redefinește distracția online.",
+      "Snowden expune supravegherea (2013), iar Internet of Things (2014) conectează obiecte cotidiene.",
+    arePoza: false,
   },
   {
-    an: "2020",
-    titlu: "Pandemia și marea digitalizare",
+    ani: "2015-2016",
+    titlu: "Live streaming și fake news",
     descriere:
-      "COVID-19 forțează munca și școala să se mute online. Zoom devine biroul, Netflix devine sala de cinema.",
+      "Periscope popularizează streaming-ul (2015), dar 2016 aduce în prim plan fake news-ul.",
+    arePoza: false,
   },
   {
-    an: "2021",
-    titlu: "Metaversul intră în trend",
+    ani: "2017-2018",
+    titlu: "Neutralitate și GDPR",
     descriere:
-      "Facebook devine „Meta” și vorbește despre Metaverse. Ideea unui internet 3D prinde contur.",
+      "SUA abrogă neutralitatea internetului (2017), dar UE răspunde cu GDPR (2018) pentru protecția datelor.",
+    arePoza: false,
   },
   {
-    an: "2022",
-    titlu: "Inteligența artificială se democratizează",
+    ani: "2019-2020",
+    titlu: "TikTok și pandemia digitală",
     descriere:
-      "AI-ul devine accesibil: generatoare de text (GPT), imagini (DALL·E), muzică, cod. Oricine poate crea cu AI.",
+      "TikTok domină (2019), iar pandemia (2020) forțează lumea să adopte munca și educația online.",
+    arePoza: false,
   },
   {
-    an: "2023",
-    titlu: "ChatGPT devine mainstream",
+    ani: "2021-2022",
+    titlu: "Metavers și AI accesibil",
     descriere:
-      "ChatGPT este adoptat la scară largă. Asistenții AI încep să devină normali în birouri, școli și aplicații.",
+      "Meta (2021) promovează Metaversul, iar în 2022, instrumente precum GPT și DALL·E democratizează AI-ul.",
+    arePoza: false,
   },
   {
-    an: "2024",
-    titlu: "Reglementările încep să apară peste tot",
+    ani: "2023-2024",
+    titlu: "ChatGPT și reglementări",
     descriere:
-      "Lumea politică și tech negociază reguli pentru AI, date și conținut online. Se pregătește o nouă eră a responsabilității digitale.",
+      "ChatGPT devine fenomen global (2023), dar 2024 aduce primele reglementări majore pentru AI și conținut online.",
+    arePoza: false,
   },
   {
-    an: "2025",
-    titlu: "Internetul devine augmentat și personalizat",
+    ani: "2025",
+    titlu: "Internet augmentat",
     descriere:
-      "AR/VR, AI, internetul omniprezent: toate converg. Lumea online se suprapune peste cea reală. Viitorul nu mai e science fiction – e acum.",
+      "AR/VR, AI și conectivitate omniprezentă suprapun lumea digitală peste cea reală. Viitorul devine prezent.",
+    arePoza: false,
   },
 ];

@@ -4,50 +4,163 @@
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
+  max-width: 1200px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 10px 20px;
   z-index: 1000;
-
-  /*  Umbra și plutirea navbarului */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: floatNav 6s ease-in-out infinite;
-}
-
-@keyframes floatNav {
-  0% {
-    transform: translateX(-50%) translateY(0px);
-  }
-  50% {
-    transform: translateX(-50%) translateY(-6px);
-  }
-  100% {
-    transform: translateX(-50%) translateY(0px);
-  }
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
   margin: 0 auto;
   list-style: none;
-  gap: 1.5rem;
   padding: 0;
+  width: 100%;
+}
+
+/* Container pentru grupul de 4 iconițe */
+.menu-icons {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .logo {
   height: 35px;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .icon {
   color: white;
-  transition: transform 0.2s ease;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon:hover {
   transform: scale(1.2);
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+/* Tabletă (601px - 1024px) */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 8px 15px;
+  }
+
+  .menu-icons {
+    gap: 1.2rem;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Telefon (sub 600px) - Mod ultra-compact */
+@media (max-width: 600px) {
+  .nav {
+    width: 96%;
+    padding: 5px 10px;
+    top: 10px;
+  }
+
+  .menu-icons {
+    gap: 0.7rem; /* Spațiu minim între iconițe */
+  }
+
+  .logo {
+    height: 24px;
+  }
+
+  .icon {
+    font-size: 1rem;
+    min-width: 24px; /* Asigură vizibilitate */
+  }
+}
+
+/* Telefoane foarte mici (sub 400px) */
+@media (max-width: 400px) {
+  .menu-icons {
+    gap: 0.4rem;
+  }
+
+  .icon {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    height: 22px;
+  }
+}
+
+.searchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.iconButton:hover {
+  transform: scale(1.2);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 4px 10px;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 0.9rem;
+  width: 120px;
+  margin-right: 0.5rem;
+  font-family: inherit;
+}
+
+.closeIcon {
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: transform 0.2s;
+}
+
+.closeIcon:hover {
+  transform: rotate(90deg) scale(1.1);
 }

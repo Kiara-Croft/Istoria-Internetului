@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "/src/assets/concurs/logo.png"; // importă logo-ul
+import logo from "/src/assets/concurs/logo.png";
 
 export default function ScrollIndicator() {
   const [scrollPercentage, setScrollPercentage] = useState(0);

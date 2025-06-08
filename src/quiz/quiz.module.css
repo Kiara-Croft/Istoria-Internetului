@@ -2,20 +2,22 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 400px;
+  height: auto; /* Schimbat din fixed height */
+  min-height: 400px; /* Înălțime minimă */
   margin: 0 auto;
   perspective: 1000px;
+  padding: 1rem; /* Adăugat padding pentru mobile */
 }
 
 .card {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 2rem); /* Compensăm pentru padding */
   height: 100%;
   background: #9e2a2b;
   border-radius: 24px;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   transition: transform 0.8s ease, opacity 0.5s ease;
   display: flex;
@@ -24,12 +26,14 @@
   z-index: 1;
   opacity: 0;
   pointer-events: none;
+  margin: 1rem; /* Adăugat pentru spațiere */
 }
 
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
   color: #fff;
+  text-align: center;
 }
 
 .answers {
@@ -42,22 +46,27 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 12px;
-  background-color: #9e2a2b;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   font-size: 1rem;
+  text-align: left;
 }
 
 .answers button:hover {
-  background-color: #f0b1b1;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
 }
 
 .correct {
-  background-color: #76c079 !important;
+  background-color: #4caf50 !important;
+  color: white !important;
 }
 
 .incorrect {
-  background-color: #ad3e3e !important;
+  background-color: #f44336 !important;
+  color: white !important;
 }
 
 .active {
@@ -88,21 +97,23 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding-top: 3rem;
+  padding: 2rem 1rem; /* Adaptat pentru mobile */
 }
 
 .scoreCard {
   background-color: #ffffff;
-  padding: 2rem 2.5rem;
+  padding: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   text-align: center;
   animation: float 4s ease-in-out infinite;
+  width: 90%;
+  max-width: 400px;
 }
 
 .scoreCard h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: #111;
 }
 
@@ -112,35 +123,37 @@
   color: white;
   border: none;
   border-radius: 9999px;
-  box-shadow: 0 10px 20px rgba(229, 70, 70, 0.3), 0 6px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(229, 70, 70, 0.3);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 200px;
 }
 
 .scoreCard button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(232, 63, 63, 0.35),
-    0 10px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(232, 63, 63, 0.35);
 }
 
 .quizBadge {
   position: absolute;
-  top: -30px;
-  left: -200px;
+  top: -20px;
+  right: 20px; /* Mutat în dreapta pentru mobile */
   background-color: #fff;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #9e2a2b;
-  letter-spacing: 1px;
   z-index: 999;
   animation: floatBadge 3s ease-in-out infinite;
 }
 
+/* Animations */
 @keyframes float {
   0%,
   100% {
@@ -158,5 +171,88 @@
   }
   50% {
     transform: translateY(-4px);
+  }
+}
+
+/* Tabletă (601px - 1024px) */
+@media (max-width: 1024px) {
+  .quizWrapper {
+    min-height: 350px;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .answers button {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Telefon (sub 600px) */
+@media (max-width: 600px) {
+  .quizWrapper {
+    min-height: 300px;
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .answers {
+    gap: 0.7rem;
+  }
+
+  .answers button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .scoreCard {
+    padding: 1.25rem;
+  }
+
+  .scoreCard h2 {
+    font-size: 1.2rem;
+  }
+
+  .quizBadge {
+    top: -15px;
+    right: 10px;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Telefoane foarte mici (sub 400px) */
+@media (max-width: 400px) {
+  .quizWrapper {
+    min-height: 280px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .answers button {
+    font-size: 0.85rem;
+  }
+
+  .scoreCard button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

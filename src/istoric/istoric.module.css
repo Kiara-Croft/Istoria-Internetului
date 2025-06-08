@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap");
-
 /* Fundal uniform roșu închis */
 body {
   background-color: #540b0e; /* roșu închis, uniform peste tot */
@@ -21,15 +19,15 @@ body {
 .eveniment {
   position: relative;
   width: 100%;
-  max-width: 1200px; /* Am adăugat o limită maximă realistă */
+  max-width: 1200px;
   height: 600px;
-  background-color: #540b0e; /* 🔥 roșu închis fundal secțiune */
+  background-color: #540b0e;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   animation: floatNav 6s ease-in-out infinite;
 }
 
-/* Plutire ușoară continuă (bonus animat!) */
+/* Plutire ușoară continuă */
 @keyframes plutireMagica {
   0% {
     transform: translateY(0px);
@@ -51,45 +49,44 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(0, 0, 0, 0.3),
     0 30px 60px rgba(0, 0, 0, 0.2);
   animation: plutireMagica 3s ease-in-out infinite;
-  font-family: "Edu SA Hand", cursive;
 }
 
 .containerMic {
   position: absolute;
   top: 20px;
   left: 30px;
-  width: 380px; /* Micșorat lățimea */
-  height: 220px; /* Micșorat înălțimea */
-  padding: 1.5rem; /* Redus puțin padding-ul */
-  overflow: hidden; /* Ascunde textul care depășește */
+  width: 380px;
+  height: 220px;
+  padding: 1.5rem;
+  overflow: hidden;
 }
 
 .containerMare {
   position: absolute;
   bottom: 30px;
   right: 30px;
-  width: 550px; /* Micșorat lățimea */
-  height: 300px; /* Micșorat înălțimea */
+  width: 550px;
+  height: 300px;
   max-width: calc(100% - 60px);
-  padding: 1.8rem; /* Redus puțin padding-ul */
-  overflow: auto; /* Adăugat scroll dacă textul depășește */
+  padding: 1.8rem;
+  overflow: auto;
 }
 
 .titlu {
-  font-size: 2rem; /* Păstrat dimensiunea uriașă */
-  line-height: 1; /* Redus line-height pentru a economisi spațiu */
-  margin-bottom: 40px; /* Redus spațierea sub titlu */
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 40px;
 }
 
 .descriere {
-  font-size: 2rem; /* Păstrat dimensiunea mare */
-  line-height: 1.2; /* Redus line-height */
+  font-size: 2rem;
+  line-height: 1.2;
   margin: 0;
 }
 
 .an {
-  font-size: 2.5rem; /* Păstrat dimensiunea uriașă */
-  line-height: 1; /* Redus line-height pentru a economisi spațiu */
+  font-size: 2.5rem;
+  line-height: 1;
   margin-top: 20px;
 }
 
@@ -104,9 +101,174 @@ body {
   will-change: opacity, transform;
 }
 
-/* Asigură-te că containerele nu cauzează layout shifts */
 .containerMic,
 .containerMare {
   contain: layout paint;
   backface-visibility: hidden;
+}
+
+.pozaEveniment {
+  position: absolute;
+  width: 285px;
+  height: auto;
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  z-index: 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+.pozaDreaptaSus {
+  top: 20px;
+  right: 20px;
+}
+
+.pozaStangaJos {
+  bottom: 20px;
+  left: 20px;
+}
+
+/* Media queries pentru responsive design */
+
+/* Tablete (768px - 1024px) */
+@media (max-width: 1024px) {
+  .eveniment {
+    height: 500px;
+  }
+
+  .containerMic {
+    width: 300px;
+    height: 180px;
+    padding: 1.2rem;
+  }
+
+  .containerMare {
+    width: 450px;
+    height: 250px;
+    padding: 1.5rem;
+  }
+
+  .titlu {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .descriere {
+    font-size: 1.6rem;
+  }
+
+  .an {
+    font-size: 2rem;
+  }
+
+  .pozaEveniment {
+    width: 220px;
+  }
+}
+
+/* Telefoane (până la 767px) */
+@media (max-width: 767px) {
+  .listaEvenimente {
+    gap: 4rem;
+    padding: 2rem 1rem;
+    margin-top: 80px;
+  }
+
+  .eveniment {
+    height: 700px; /* Mai înalt pentru a încăpea elementele stivuite */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .containerMic,
+  .containerMare {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 10px 0;
+    padding: 1.2rem;
+  }
+
+  .containerMic {
+    order: 1;
+  }
+
+  .containerMare {
+    order: 3;
+  }
+
+  .pozaEveniment {
+    position: relative;
+    order: 2;
+    width: 60%;
+    max-width: 250px;
+    margin: 20px auto;
+    transform: rotate(0deg);
+  }
+
+  .pozaDreaptaSus,
+  .pozaStangaJos {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
+
+  .titlu {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .descriere {
+    font-size: 1.3rem;
+  }
+
+  .an {
+    font-size: 1.8rem;
+    margin-top: 15px;
+  }
+}
+
+/* Telefoane mici (până la 480px) */
+@media (max-width: 480px) {
+  .listaEvenimente {
+    gap: 3rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .eveniment {
+    height: 650px;
+    padding: 15px;
+  }
+
+  .containerMic,
+  .containerMare {
+    padding: 1rem;
+  }
+
+  .titlu {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+
+  .descriere {
+    font-size: 1.1rem;
+  }
+
+  .an {
+    font-size: 1.5rem;
+  }
+
+  .pozaEveniment {
+    width: 70%;
+  }
 }

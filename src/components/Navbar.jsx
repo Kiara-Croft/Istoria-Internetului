@@ -1,18 +1,25 @@
+import { useState } from "react";
 import styles from "./Navbar.module.css";
-import { Book, HelpCircle, Search, User } from "lucide-react";
+import { Book, HelpCircle, Search, User, X } from "lucide-react";
 
 export default function Navbar() {
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter") {
+      const an = searchValue.trim();
+      if (an.match(/^\d{4}$/)) {
+        window.location.hash = `an-${an}`;
+        setSearchValue("");
+        setShowSearch(false);
+      }
+    }
+  };
+
   return (
     <nav className={styles.nav}>
       <ul className={styles.menu}>
-        <li>
-          <img
-            src="/src/assets/concurs/logo.png"
-            alt="logo"
-            className={styles.logo}
-          />
-        </li>
-
         <li>
           <a href="#istoric" className={styles.icon}>
             <Book size={22} />
@@ -25,10 +32,36 @@ export default function Navbar() {
           </a>
         </li>
 
-        <li>
-          <a href="#search" className={styles.icon}>
-            <Search size={22} />
-          </a>
+        <li className={styles.searchContainer}>
+          {showSearch ? (
+            <div className={styles.searchBar}>
+              <input
+                type="text"
+                placeholder="Caută un an..."
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+                onKeyDown={handleSearch}
+                className={styles.searchInput}
+                autoFocus
+              />
+              <X
+                size={18}
+                className={styles.closeIcon}
+                onClick={() => {
+                  setShowSearch(false);
+                  setSearchValue("");
+                }}
+              />
+            </div>
+          ) : (
+            <button
+              onClick={() => setShowSearch(true)}
+              className={styles.iconButton}
+              aria-label="Deschide căutarea"
+            >
+              <Search size={22} />
+            </button>
+          )}
         </li>
 
         <li>

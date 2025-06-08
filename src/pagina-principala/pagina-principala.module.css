@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap");
-
 .titlu {
-  font-family: "Just Me Again Down Here", cursive;
   font-size: 6rem;
   font-weight: normal;
   margin: 0;
@@ -24,7 +21,6 @@
 }
 
 .subtitlu {
-  font-family: "Just Me Again Down Here", cursive;
   font-size: 3rem;
   opacity: 0.85;
   text-shadow: 2px 4px 8px rgba(0, 0, 0, 10);

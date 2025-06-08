@@ -17,14 +17,69 @@
   font-size: 1.5rem;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
   text-align: center;
+  width: 100%;
+  max-width: 600px; /* Limităm lățimea pe ecrane mari */
+  margin: 0 auto; /* Centrare */
 }
 
 .link {
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block; /* Pentru a permite transformări */
 }
 
 .link:hover {
   background-color: #b43a3a;
   transform: translateY(-2px);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Tabletă (601px - 1024px) */
+@media (max-width: 1024px) {
+  .contactSection {
+    padding: 3rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .text,
+  .link {
+    font-size: 1.3rem;
+    padding: 0.8rem 1.5rem;
+    max-width: 500px;
+  }
+}
+
+/* Telefon (sub 600px) */
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 2rem 1rem;
+    gap: 1.2rem;
+  }
+
+  .text,
+  .link {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .link:hover {
+    transform: translateY(-1px); /* Efect mai subtil pe mobil */
+  }
+}
+
+/* Telefoane foarte mici (sub 400px) */
+@media (max-width: 400px) {
+  .contactSection {
+    padding: 1.5rem 0.8rem;
+    gap: 1rem;
+  }
+
+  .text,
+  .link {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
 }
