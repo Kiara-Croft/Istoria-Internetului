@@ -30,7 +30,7 @@ export default function ScrollIndicator() {
       const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
       const roundedPercent = Math.round(scrollPercent);
 
-      setScrollPercentage(roundedPercent); // pentru debugging, dacă vrei să-l folosești în altă parte
+      setScrollPercentage(roundedPercent);
 
       const thumbHeight = 100 * (windowHeight / documentHeight);
       const thumbPosition =

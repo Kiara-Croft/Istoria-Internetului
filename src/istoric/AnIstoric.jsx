@@ -120,7 +120,7 @@ export default function AnIstoric() {
             <div
               key={index}
               className={styles.eveniment}
-              id={`an-${eveniment.ani.replace(/_/g, "-")}`} // ✅ id pentru scroll
+              id={`an-${eveniment.ani.replace(/_/g, "-")}`}
             >
               <div className={styles.containerMic} data-animation="fadeIn">
                 <h2 className={styles.titlu}>{eveniment.titlu}</h2>
