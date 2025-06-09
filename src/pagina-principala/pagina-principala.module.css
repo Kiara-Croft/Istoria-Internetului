@@ -1,53 +1,257 @@
-.titlu {
-  font-size: 6rem;
-  font-weight: normal;
-  margin: 0;
-  line-height: 1.1;
-  color: white;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 10);
-  animation: floatText 4s ease-in-out infinite;
-}
-
-@keyframes floatText {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.subtitlu {
-  font-size: 3rem;
-  opacity: 0.85;
-  text-shadow: 2px 4px 8px rgba(0, 0, 0, 10);
-  animation: floatText 4s ease-in-out infinite;
-}
-
-.hero {
-  position: relative;
-  width: 100%;
+.containerCalculator {
+  display: flex;
+  justify-content: center;
+  align-items: start;
   height: 100vh;
-  overflow: hidden;
+  position: relative;
+  padding-top: 100px;
 }
 
-.imagine {
+.monitor {
+  position: relative;
+  width: 900px;
+  height: 750px;
+  margin-bottom: 30px;
+}
+
+.monitorSpate {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: brightness(0.85);
-  transform: scale(1.02);
-  transition: transform 3s ease;
+  background: #7a7a7a;
+  border-radius: 2% / 50%;
+  z-index: 0;
 }
 
-.overlay {
+.monitorFata {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e3e3e3;
+  border: 3px solid #888;
+  border-radius: 1%;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.rama {
+  background: #7a7a7a;
+  border-radius: 30% / 5%;
+  height: 540px;
+  padding: 30px;
+}
+
+.ecran {
+  width: 100%;
+  height: 100%;
+  background: #171717;
+  border-radius: 50% / 8%;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+}
+
+.ecranPornit {
+  background: repeating-linear-gradient(
+    to bottom,
+    #171717,
+    #171717 3px,
+    #121212 3px,
+    #121212 6px
+  );
+}
+
+.ramaInterior {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.afisaj {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "VT323", monospace;
+  color: #33ff66;
+}
+
+/* Titlu Matrix static */
+.titluMatrix {
   position: absolute;
-  bottom: 4rem;
-  left: 4rem;
-  text-align: left;
-  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #33ff66;
+  z-index: 2;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 0 0 5px #33ff66;
+  pointer-events: none;
+}
+
+/* Liniile animate */
+.linieMatrix {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  white-space: nowrap;
+  font-size: 20px;
+  opacity: 0.3;
+  animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+
+/* Power button și LED */
+.butonPower {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 72px;
+  height: 72px;
+  background: #999;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconPower {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #555;
+  border-radius: 50%;
+}
+
+.ledPower {
+  position: absolute;
+  bottom: 48px;
+  right: 135px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.ledOn {
+  background: #1bcf60;
+  box-shadow: 0 3px 15px #1bcf60;
+}
+
+.ledOff {
+  background: #fa4646;
+  box-shadow: 0 3px 15px #fa4646;
+}
+
+.coloanaMatrix {
+  position: absolute;
+  top: -100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  color: #33ff66;
+  font-family: "VT323", monospace;
+  opacity: 0.6;
+  animation: matrixFall 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrixFall {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* === TABLETĂ === */
+@media (max-width: 1024px) {
+  .monitor {
+    width: 700px; /* mai mic decât 900px */
+    height: 600px; /* mai mic decât 750px */
+  }
+
+  .containerCalculator {
+    padding-top: 130px;
+  }
+}
+
+/*=== TELEFON mic ===*/
+@media (max-width: 600px) {
+  .containerCalculator {
+    padding-top: 100px;
+  }
+
+  .monitor {
+    width: 90vw;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    margin-bottom: 20px;
+  }
+
+  .monitorFata {
+    height: 300px;
+  }
+
+  .rama {
+    background: #7a7a7a;
+    border-radius: 30% / 5%;
+    height: 210px;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  .ecran {
+    width: 100%;
+    height: 100%;
+    background: #171717;
+    border-radius: 50% / 8%;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  .titluMatrix {
+    font-size: 18px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .coloanaMatrix {
+    display: none; /* scoatem efectul Matrix în exces */
+  }
+
+  .linieMatrix {
+    display: none;
+  }
+
+  .butonPower {
+    width: 36px;
+    height: 36px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .iconPower {
+    width: 18px;
+    height: 18px;
+    border-width: 2px;
+  }
+
+  .ledPower {
+    bottom: 36px;
+    right: 65px;
+    width: 14px;
+    height: 14px;
+  }
 }

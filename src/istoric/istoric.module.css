@@ -1,33 +1,33 @@
-/* Fundal uniform roșu închis */
+/* ce e inafara sectiuni */
 body {
-  background-color: #540b0e; /* roșu închis, uniform peste tot */
+  background-color: black;
   margin: 0;
   padding: 0;
   font-family: system-ui, sans-serif;
   overflow-x: hidden; /* Previne scroll-ul orizontal */
 }
 
+/*pozita sectiuni care imi tine cele 2 dreptunghiuri */
 .listaEvenimente {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6rem;
+  gap: 10rem;
   padding: 4rem 2rem;
   margin-top: 100px;
 }
 
+/*sectiunea care imi tine cele 2 dreptunghiuri*/
 .eveniment {
   position: relative;
   width: 100%;
   max-width: 1200px;
   height: 600px;
-  background-color: #540b0e;
+  background-color: transparent;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  animation: floatNav 6s ease-in-out infinite;
 }
 
-/* Plutire ușoară continuă */
+/* Plutire ușoară continuă pe dreptunghiurile mele*/
 @keyframes plutireMagica {
   0% {
     transform: translateY(0px);
@@ -40,17 +40,33 @@ body {
   }
 }
 
-.containerMic,
-.containerMare {
-  background-color: #9e2a2b;
-  color: white;
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 20px 40px rgba(0, 0, 0, 0.3),
-    0 30px 60px rgba(0, 0, 0, 0.2);
-  animation: plutireMagica 3s ease-in-out infinite;
+.animatiePlutire {
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
+/*ce se aseamana intre cele 2 dretunghiuri*/
+.containerMic,
+.containerMare {
+  background-color: RGB(0, 255, 65);
+  color: rgb(5, 5, 5);
+  border-radius: 16px;
+  padding: 2rem;
+  animation: plutireMagica 3s ease-in-out infinite;
+  contain: layout paint;
+  backface-visibility: hidden;
+}
+
+.containerMic,
+.containerMare {
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 255, 70, 0.6), 0 0 20px rgba(0, 255, 70, 0.4),
+    inset 0 0 10px rgba(0, 255, 70, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+/*dreptunghiu mic*/
 .containerMic {
   position: absolute;
   top: 20px;
@@ -61,6 +77,7 @@ body {
   overflow: hidden;
 }
 
+/*dreptunghiul mare*/
 .containerMare {
   position: absolute;
   bottom: 30px;
@@ -72,22 +89,25 @@ body {
   overflow: auto;
 }
 
+/*titlul din containerul mic*/
 .titlu {
   font-size: 2rem;
   line-height: 1;
   margin-bottom: 40px;
 }
 
-.descriere {
-  font-size: 2rem;
-  line-height: 1.2;
-  margin: 0;
-}
-
+/*anul din containerul mic*/
 .an {
   font-size: 2.5rem;
   line-height: 1;
   margin-top: 20px;
+}
+
+/*informatia din containerul mare*/
+.descriere {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
 }
 
 .invizibil {
@@ -96,17 +116,7 @@ body {
   transition: none !important;
 }
 
-.animatiePlutire {
-  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.containerMic,
-.containerMare {
-  contain: layout paint;
-  backface-visibility: hidden;
-}
-
+/*pozele ce au in comun*/
 .pozaEveniment {
   position: absolute;
   width: 285px;
@@ -127,8 +137,6 @@ body {
   bottom: 20px;
   left: 20px;
 }
-
-/* Media queries pentru responsive design */
 
 /* Tablete (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -175,7 +183,7 @@ body {
   }
 
   .eveniment {
-    height: 700px; /* Mai înalt pentru a încăpea elementele stivuite */
+    height: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,12 +210,12 @@ body {
   }
 
   .containerMare {
-    order: 3;
+    order: 2;
   }
 
   .pozaEveniment {
     position: relative;
-    order: 2;
+    order: 3;
     width: 60%;
     max-width: 250px;
     margin: 20px auto;
@@ -224,16 +232,16 @@ body {
   }
 
   .titlu {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-bottom: 20px;
   }
 
   .descriere {
-    font-size: 1.3rem;
+    font-size: 0.5rem;
   }
 
   .an {
-    font-size: 1.8rem;
+    font-size: 1rem;
     margin-top: 15px;
   }
 }

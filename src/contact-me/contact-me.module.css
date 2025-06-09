@@ -1,21 +1,22 @@
 .contactSection {
-  background-color: #540b0e;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
   padding: 4rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  font-family: "Patrick Hand", cursive;
+  margin-top: 60px;
 }
 
 .text,
 .link {
-  background-color: #9e2a2b;
-  color: #fff;
+  background-color: #00ff41;
+  color: #000000;
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-size: 1.5rem;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
   text-align: center;
   width: 100%;
   max-width: 600px; /* Limităm lățimea pe ecrane mari */
@@ -30,7 +31,7 @@
 }
 
 .link:hover {
-  background-color: #b43a3a;
+  background-color: #00ff41;
   transform: translateY(-2px);
   box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.5);
 }
@@ -55,6 +56,7 @@
   .contactSection {
     padding: 2rem 1rem;
     gap: 1.2rem;
+    margin-top: 60px;
   }
 
   .text,
@@ -75,6 +77,7 @@
   .contactSection {
     padding: 1.5rem 0.8rem;
     gap: 1rem;
+    margin-top: 60px;
   }
 
   .text,

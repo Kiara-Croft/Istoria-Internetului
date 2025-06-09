@@ -1,5 +1,7 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
+import { evenimenteIstorice } from "../istoric/istoricData";
+
 import { Book, HelpCircle, Search, User, X } from "lucide-react";
 
 export default function Navbar() {
@@ -8,9 +10,22 @@ export default function Navbar() {
 
   const handleSearch = (e) => {
     if (e.key === "Enter") {
-      const an = searchValue.trim();
-      if (an.match(/^\d{4}$/)) {
-        window.location.hash = `an-${an}`;
+      const anCautat = searchValue.trim();
+      if (anCautat.match(/^\d{4}$/)) {
+        const index = evenimenteIstorice.findIndex((ev) => {
+          if (!ev.ani) return false;
+          const [start, end] = ev.ani.split("-").map(Number);
+          const an = Number(anCautat);
+          return an >= start && an <= end;
+        });
+
+        if (index !== -1) {
+          const idAn = `an-${evenimenteIstorice[index].ani}`;
+          window.location.hash = idAn;
+        } else {
+          alert("Anul nu a fost găsit 😢");
+        }
+
         setSearchValue("");
         setShowSearch(false);
       }

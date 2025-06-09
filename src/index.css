@@ -22,42 +22,14 @@ a {
 /* Stiluri pentru scrollbar - Chrome/Safari */
 ::-webkit-scrollbar {
   width: 1px;
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 25px;
-  margin: 10px 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 25px;
-  border: 10px solid transparent;
-  background-clip: content-box;
-  position: relative;
-}
-
-::-webkit-scrollbar-thumb::after {
-  content: attr(data-percent) "%";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Stiluri pentru Firefox (ajustate din JS) */
 #firefox-scroll-thumb {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 25px;
-  transition: height 0.2s, top 0.2s;
+  width: 1px;
 }
 
+/*chestia pe care imi sta logoul */
 #custom-scroll-thumb {
   position: fixed;
   right: 10px;
@@ -75,16 +47,18 @@ a {
   transition: height 0.2s ease, top 0.2s ease;
 }
 
+/*logoul*/
 .scroll-logo {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-bottom: 4px;
   user-select: none;
 }
 
+/*procentajul*/
 .scroll-percent {
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
   user-select: none;

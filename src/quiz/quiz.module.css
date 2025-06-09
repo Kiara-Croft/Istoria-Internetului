@@ -2,20 +2,20 @@
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: auto; /* Schimbat din fixed height */
-  min-height: 400px; /* Înălțime minimă */
+  height: auto;
+  min-height: 400px;
   margin: 0 auto;
   perspective: 1000px;
-  padding: 1rem; /* Adăugat padding pentru mobile */
+  padding: 1rem;
 }
 
 .card {
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100% - 2rem); /* Compensăm pentru padding */
+  width: calc(100% - 2rem);
   height: 100%;
-  background: #9e2a2b;
+  background: #00ff41;
   border-radius: 24px;
   padding: 1.5rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
@@ -26,13 +26,13 @@
   z-index: 1;
   opacity: 0;
   pointer-events: none;
-  margin: 1rem; /* Adăugat pentru spațiere */
+  margin: 1rem;
 }
 
 .card h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: #000000;
   text-align: center;
 }
 
@@ -46,8 +46,8 @@
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: rgb(0, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
@@ -55,7 +55,7 @@
 }
 
 .answers button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
   transform: translateX(5px);
 }
 
@@ -97,11 +97,11 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 1rem; /* Adaptat pentru mobile */
+  padding: 2rem 1rem;
 }
 
 .scoreCard {
-  background-color: #ffffff;
+  background-color: #00ff41;
   padding: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -119,11 +119,11 @@
 
 .scoreCard button {
   padding: 12px 24px;
-  background-color: #9e2a2b;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 9999px;
-  box-shadow: 0 4px 8px rgba(229, 70, 70, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -141,16 +141,10 @@
 .quizBadge {
   position: absolute;
   top: -20px;
-  right: 20px; /* Mutat în dreapta pentru mobile */
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #9e2a2b;
+  right: 20px;
+  background-color: #000000;
+  color: #000000;
   z-index: 999;
-  animation: floatBadge 3s ease-in-out infinite;
 }
 
 /* Animations */
