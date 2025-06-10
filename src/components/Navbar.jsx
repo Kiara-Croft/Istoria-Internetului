@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 import { evenimenteIstorice } from "../istoric/istoricData";
-
 import { Book, HelpCircle, Search, User, X } from "lucide-react";
 
 export default function Navbar() {
