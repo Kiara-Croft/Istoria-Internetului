@@ -11,7 +11,7 @@ export const evenimenteIstorice = [
     titlu: "Calculatoarele învață să „colaboreze”",
     descriere:
       "Time-sharing-ul permite utilizare simultană a calculatoarelor (1959), iar multitasking-ul (1960) face posibil execuția mai multor sarcini. Primii pași către rețele.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "1961-1962",
@@ -81,7 +81,7 @@ export const evenimenteIstorice = [
     titlu: "Usenet și cultura digitală",
     descriere:
       "Apare Usenet (1979), strămoșul forumurilor, iar discuțiile online devin parte din viața academică (1980).",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "1981-1982",
@@ -102,7 +102,7 @@ export const evenimenteIstorice = [
     titlu: ".com și NSFNET",
     descriere:
       "Symbolics.com devine primul domeniu comercial (1985), iar NSFNET preia rolul ARPANET (1986).",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "1987-1988",
@@ -130,14 +130,14 @@ export const evenimenteIstorice = [
     titlu: "Mosaic și era dot-com",
     descriere:
       "Browserul Mosaic (1993) aduce grafica, iar 1994 aduce Netscape, reclame online și comerț electronic.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "1995-1996",
     titlu: "Windows 95 și Yahoo!",
     descriere:
       "Windows 95, Amazon și eBay (1995) democratizează internetul, iar Yahoo! domină anii 1996.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "1997-1998",
@@ -151,7 +151,7 @@ export const evenimenteIstorice = [
     titlu: "Napster și crahul dot-com",
     descriere:
       "Napster popularizează P2P (1999), dar bula dot-com se sparge în 2000.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "2001-2002",
@@ -165,14 +165,14 @@ export const evenimenteIstorice = [
     titlu: "MySpace și Facebook",
     descriere:
       "MySpace domină (2003), dar Facebook (2004) revoluționează rețelele sociale.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "2005-2006",
     titlu: "YouTube și Twitter",
     descriere:
       "YouTube (2005) aduce video-ul maselor, iar Twitter (2006) introduce comunicarea scurtă și virală.",
-    arePoza: true,
+    arePoza: false,
   },
   {
     ani: "2007-2008",
